@@ -13,7 +13,15 @@ import iconyoutube from "../app/assets/icon-youtube.svg";
 
 export default function Home() {
 
-  const [darkMode, setDarkMode] = useState(false);
+  
+
+  // Initialize darkMode state to false as a default
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check for dark mode preference in localStorage
+    const savedMode = localStorage.getItem("darkMode");
+    // Return true if savedMode is "true", otherwise false
+    return savedMode === "true" ? true : false;
+  });
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -21,13 +29,15 @@ export default function Home() {
 
   useEffect(() => {
     document.body.className = darkMode ? 'dark' : '';
+    // Save the user's preference to localStorage
+    localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
   
 
   return (
     // <div className={`${darkMode && "dark"}`}>
     <main className="flex justify-center min-h-screen  dark:bg-very-dark-blue-bg">
-      <div className="bg-light-grayish-blue  dark:bg-very-dark-blue-top-bg w-full h-52 dark:h-full p-8 md:p-24 justify-between flex-row">
+      <div className="bg-light-grayish-blue dark:bg-very-dark-blue-top-bg w-full h-full dark:h-full p-8 md:p-24 justify-between flex-row">
       
      <div className="flex-grow">
       {/* Header */}
