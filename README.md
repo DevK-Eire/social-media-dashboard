@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Table of contents
 
-## Getting Started
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-First, run the development server:
+# Social Media Dashboard Challenge
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a responsive Social Media Dashboard for desktop and mobile
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### The challenge
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users should be able to:
 
-## Learn More
+- View the optimal layout depending on their device's screen size
+- Save the Theme to be local to that browswer
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Screenshot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Desktop
 
-## Deploy on Vercel
+<img alt="Social Media Dashboard Desktop" src="https://github.com/DevK-Eire/social-media-dashboard/blob/main/public/socialmedia.PNG" align="center">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Mobile
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img alt="Social Media Dashboard Mobile" src="https://github.com/DevK-Eire/social-media-dashboard/blob/main/public/socialmobile.PNG" align="center">
+
+### Links
+
+- Solution URL: [Social Media Dashboard Link](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-o9iJhXlKrx)
+- Live Site URL: [Live Website](https://social-media-dashboard-jet-five.vercel.app/)
+
+## My process
+
+### Built with
+
+- Tailwind
+- NEXTJS
+- TypeScript
+- Mobile-first workflow
+  #### Note:Fixed the spelling mistake in the image
+
+### Useful resources
+
+- [w3schools](https://www.w3schools.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Tailwind UI](https://tailwindui.com)
+
+## Author
+
+- Github - [Dev Killian](https://github.com/DevK-Eire)
+- Frontend Mentor - [@DevK-Eire](https://www.frontendmentor.io/profile/DevK-Eire)
