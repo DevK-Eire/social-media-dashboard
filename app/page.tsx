@@ -26,19 +26,19 @@ export default function Home() {
 
   return (
     // <div className={`${darkMode && "dark"}`}>
-    <main className="flex justify-center min-h-screen bg-white dark:bg-very-dark-blue-bg ">
-      <div className="bg-light-grayish-blue  dark:bg-very-dark-blue-top-bg w-full h-52 dark:h-full p-8 md:p-24 justify-between flex-row ">
+    <main className="flex justify-center min-h-screen  dark:bg-very-dark-blue-bg">
+      <div className="bg-light-grayish-blue  dark:bg-very-dark-blue-top-bg w-full h-52 dark:h-full p-8 md:p-24 justify-between flex-row">
       
      <div className="flex-grow">
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between bg-light-grayish-blue dark:bg-very-dark-blue-top-bg p-2 md:p-16">
-        <div className="space-y-3">
-        <h1 className="text-3xl md:text-3xl font-bold text-dark-gray dark:text-white">Social Media Dashboard</h1>
+      <div className="flex flex-col md:flex-row justify-between bg-light-grayish-blue dark:bg-very-dark-blue-top-bg p-2 md:p-16 ">
+        <div className="md:space-y-3">
+        <h1 className="text-2xl md:text-3xl font-bold text-dark-gray dark:text-white">Social Media Dashboard</h1>
         <p className="font-bold text-dark-grayish-blue dark:text-desaturated-blue">Total Followers: 23,004</p>
 
         </div>
         
-          <div className="text-dark-grayish-blue min-[1152px]:hidden" />
+          <div className="text-dark-grayish-blue min-[1152px]:hidden border-t border-dark-grayish-blue my-4" />
           <div className="flex justify-between min-[1152px]:gap-1.2 gap-2 items-center">
             <h2 className="font-bold text-dark-grayish-blue dark:text-desaturated-blue">
             {darkMode ? "Dark Mode" : "Light Mode"}
