@@ -13,26 +13,38 @@ import iconyoutube from "../app/assets/icon-youtube.svg";
 
 export default function Home() {
 
-  
-
-  // Initialize darkMode state to false as a default
   const [darkMode, setDarkMode] = useState(() => {
-    // Check for dark mode preference in localStorage
-    const savedMode = localStorage.getItem("darkMode");
-    // Return true if savedMode is "true", otherwise false
-    return savedMode === "true" ? true : false;
+    if (typeof window !== "undefined") {
+      const savedMode = localStorage.getItem("darkMode");
+      return savedMode ? savedMode === "true" : true; // Default to true if not set
+    }
+    return true; // Default to true during SSR
   });
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode) {
+      setDarkMode(savedMode === "true");
+    }
+    setLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (loaded) {
+      document.body.className = darkMode ? 'dark' : '';
+      localStorage.setItem("darkMode", darkMode.toString());
+    }
+  }, [darkMode, loaded]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-  }
+  };
 
-  useEffect(() => {
-    document.body.className = darkMode ? 'dark' : '';
-    // Save the user's preference to localStorage
-    localStorage.setItem("darkMode", darkMode.toString());
-  }, [darkMode]);
-  
+  // Prevent the component from rendering until the preference is loaded
+  if (!loaded) {
+    return null; // or a loader/spinner
+  }
 
   return (
     // <div className={`${darkMode && "dark"}`}>
